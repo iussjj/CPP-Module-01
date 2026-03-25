@@ -1,20 +1,20 @@
 # Program name
-NAME		= violence
+NAME		= sed_sux
 
 # Compiler and flags
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++20
 
 # Source files and Object files
-SRCS		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS		= main.cpp Replacer.cpp
 OBJS		= $(SRCS:.cpp=.o)
-HEADERS		= Weapon.hpp HumanA.hpp HumanB.hpp
+HEADERS		= Replacer.hpp
 
 # Rules
 all: $(NAME)
 
-%.o: %.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+# Tell Make that every .o file depends on the headers being up-to-date
+$(OBJS): $(HEADERS)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
