@@ -5,7 +5,7 @@
 	Initialization list necessary to avoid compiler error,
 	since HumanA has a reference attribute that may not be
 	undefined at any time.
-	Also, it's The C++ Way 🇺🇸
+	Also, it's The C++ Way 🇩🇰
 
 	Note on dot . and arrow -> operators: . is used with actual objects and
 	references:
@@ -15,9 +15,9 @@
 	this->weapon->getType()
 */
 
-HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
 {
-	this->name = name;
+
 }
 
 HumanA::~HumanA()

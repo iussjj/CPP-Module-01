@@ -14,9 +14,9 @@
 	or in this case, store its memory address in a non-const pointer.
 */
 
-HumanB::HumanB(std::string name) : name(name)
+HumanB::HumanB(std::string name) : name(name), weapon(nullptr)
 {
-	this->weapon = nullptr;
+
 }
 
 HumanB::~HumanB()
